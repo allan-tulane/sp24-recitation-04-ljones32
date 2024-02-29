@@ -1,6 +1,6 @@
 # CMPS 2200  Recitation 04
 
-**Name (Team Member 1):**_________________________  
+**Name (Team Member 1):** London Jones  
 **Name (Team Member 2):**_________________________
 
 
@@ -37,6 +37,7 @@ To use this function to count words, you'll need to implement your own `map_f` a
 4. Assume that a word `w` appears `n` times. What is the **work** and **span** of `word_count_reduce` for this word, assuming a parallel implementation of the `reduce` function?
 
 **Enter answer here**
+O(n) Span = O(log2n)
 
 
 5. Why are we going through all this trouble? Couldn't I just use this function to count words?
@@ -53,14 +54,83 @@ for doc in docs:
 What is the problem that prevents us from easily parallelizing this solution?
 
 **Enter answer here**
-
-
-## Part 2: Sentiment analysis
-
-Finally, we'll adapt our approach above to perform a simple type of sentiment analysis. Given a document, rather than counting words, we will instead count the number of positive and negative terms in the document, given a predefined list of terms. E.g., if the input sentence is `it was a terrible waste of time` and the terms `terrible` and `waste` are in our list of negative terms, then the output is
-
-`[('negative', 1), ('negative', 1)]`
-
-6. Complete the `sentiment_map` function to implement the above idea and test it with `test_sentiment_map`.
-
-7. Since the output here is similar to the word count problem, we will reuse `word_count_reduce` to compute the total number of positive and negative terms in a sequence of documents. Confirm your results work by running `test_sentiment`.
+The algorithm is not independent, therefore it would not be able to run simultaneously. The problem is that the approach operates in a sequential manner. We would need it to run concurrently to utilize parallelization.   cvdocs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
+# counts = {'i': 2, 'am': 2, 'sam': 2, 'is': 1, 'ham': 1}docs = ['i am sam i am', 'sam is ham']
+counts = {}
+for doc in docs:
+    for term in doc.split():
+        counts[term] = counts.get(term, 0) + 1
